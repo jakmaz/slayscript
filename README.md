@@ -14,7 +14,7 @@ git clone https://github.com/jakmaz/slayscript
 cd slayscript
 
 # Build it
-cargo build
+cargo build // No stable build yet
 ```
 
 ### 🧑‍💻 JavaScript vs SlayScript
