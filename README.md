@@ -2,10 +2,6 @@
 
 Welcome to **SlayScript** – the programming language that _rocks harder_ than any other! This isn’t just another language; it’s a lifestyle. Let’s dive in and see how SlayScript brings the **drip** to your code, one `combo` at a time.
 
-## 🤘 What is SlayScript?
-
-SlayScript is a unique programming language designed to keep your coding sessions **hype**. Forget the boring `+`, `-`, `*`, `/` operators and embrace **drip**, **lack**, **combo**, and **ratio**. It’s like programming in the middle of a mosh pit.
-
 ## 🚀 Quickstart
 
 Here’s how to make your code _slay_ with SlayScript.
@@ -21,39 +17,60 @@ cd slayscript
 cargo build
 ```
 
-### Syntax
+### 🧑‍💻 JavaScript vs SlayScript
 
-Here’s a taste of how you can throw down with SlayScript:
+Let's see how this compares to JavaScript. In JavaScript, you'd have to do something like this:
 
-```rust
-use slayscript::{Expr, Op, Number};
-
-// Slayin' some math
-let result = Expr::new("1drip2"); // equivalent to 1 + 2
-
-// Rock on 🤘
-assert_eq!(
-    result,
-    Expr {
-        lhs: Number(1),
-        rhs: Number(2),
-        op: Op::Add,
-    }
-);
+```javascript
+let a = 10 / 2;
 ```
 
-### Operators in SlayScript
+This is... *boring*, right? A simple division statement with no personality, no flair. But check out how **SlayScript** takes it to the next level:
 
-| Operator | What It Means in SlayScript | What It Really Means |
-| -------- | --------------------------- | -------------------- |
-| `drip`   | You’re adding some flair    | `+`                  |
-| `lack`   | Take away the vibes         | `-`                  |
-| `combo`  | A power move                | `*`                  |
-| `ratio`  | Divide and conquer          | `/`                  |
+```slay
+fresh a be 10 ratio 2;
+```
+
+And that's a real production code!
+
+## 🔥 Syntax Explanations
+
+### Variable Definition
+
+In **SlayScript**, the keyword `fresh` is used to define a new variable. It’s like saying "yo, here’s something fresh!" rather than the boring `let` or `var`.
+
+```slay
+fresh x be 10;
+```
+
+This would define a new variable `x` and set it to `10`.
+
+- **`fresh`**: The keyword for defining new variables.
+- **`be`**: Used instead of `=` to assign values.
+- The operator (like `ratio`, `combo`, etc.) will come later when you need to perform operations.
+
+### Mathematical Operators
+
+In **SlayScript**, we spice up basic math operations. Here’s how it works:
+
+| SlayScript Operator | What It Means | JavaScript Equivalent |
+| ------------------- | ------------- | --------------------- |
+| `drip`              | Adds some flair  | `+`                   |
+| `lack`              | Take away the vibes  | `-`                   |
+| `combo`             | A power move   | `*`                   |
+| `ratio`             | Divide and conquer  | `/`                   |
+
+### Example Usage
+
+```slay
+fresh result be 5 drip 3;  // Equivalent to 5 + 3
+```
+
+This is **SlayScript** doing what it does best—adding **flair** to basic arithmetic. You can now say you're adding with some serious style.
 
 ## 🤔 Why?
 
-Why not? If you’re going to code, you might as well make it **legendary**.
+Why not? If you’re going to code, you might as well make it **legendary**. **SlayScript** lets you ditch the boring syntax and gives your code some real personality.
 
 ## 🐛 Bugs?
 
