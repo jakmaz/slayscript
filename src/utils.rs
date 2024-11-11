@@ -1,8 +1,20 @@
+pub(crate) fn take_while(accept: impl Fn(char) -> bool, s: &str) -> (&str, &str) {
+    let extracted_end = s
+        .char_indices()
+        .find_map(|(idx, c)| if accept(c) { None } else { Some(idx) })
+        .unwrap_or_else(|| s.len());
+
+    let extracted = &s[..extracted_end];
+    let remainder = &s[extracted_end..];
+    (remainder, extracted)
+}
+
+pub(crate) fn extract_whitespace(s: &str) -> (&str, &str) {
+    take_while(|c| c == ' ', s)
+}
+
 pub(crate) fn extract_digits(s: &str) -> (&str, &str) {
-    let end = s.find(|c: char| !c.is_digit(10)).unwrap_or(s.len());
-    let digits = &s[..end];
-    let remaining = &s[end..];
-    (remaining, digits)
+    take_while(|c| c.is_ascii_digit(), s)
 }
 
 pub(crate) fn extract_op(s: &str) -> (&str, &str) {
@@ -60,5 +72,10 @@ mod test {
     #[test]
     fn extract_slash() {
         assert_eq!(extract_op("ratio4"), ("4", "ratio"));
+    }
+
+    #[test]
+    fn extract_spaces() {
+        assert_eq!(extract_whitespace("    1"), ("1", "    "));
     }
 }
